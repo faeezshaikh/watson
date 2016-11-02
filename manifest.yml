@@ -1,0 +1,16 @@
+---
+declared-services:
+  conversation-simple-demo-test1:
+    label: conversation
+    plan: free
+applications:
+- name: faeez-chatbot
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - Conversation-ed
+  env:
+    NPM_CONFIG_PRODUCTION: false
+    WORKSPACE_ID: b002e425-f52b-40ce-9669-be88df815abf
